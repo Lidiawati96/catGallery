@@ -1,0 +1,19 @@
+<H1>Upload Image Cat by File</H1>
+<br><br>
+<div class="text-center"> 
+	<input class="form-control" type="file" accept="image/*"
+			(change)="onChange($event)"> 
+    <br><br>
+	<button (click)="onUpload()" 
+		class="btn btn-success"> 
+		Upload 
+	</button> &nbsp;&nbsp;&nbsp;
+    <button (click)="back()" class="btn btn-success">Back To List</button>
+</div> 
+<br><br>
+<!--Flag variable is used here-->
+<div class="container">
+    <div class="alert alert-warning" *ngIf="loading"> 
+	    <h3>Loading ...</h3> 
+    </div>
+</div> 

@@ -1,0 +1,21 @@
+<H1>Upload Image Cat by Url</H1>
+<br><br>
+<div class="container">
+    <div class="alert alert-warning" *ngIf="catForm.dirty && catForm.invalid">Enter Invalid Values</div>
+    <div class="alert alert-warning" *ngIf="catForm.dirty && description.invalid">Enter Invalid Values</div>
+    
+    <form (ngSubmit)="!catForm.invalid && saveCat()" #catForm="ngForm">
+        <fieldset class="form-group">
+            <label>Id</label>
+            <input type="text" #description="ngModel" [(ngModel)]="cat.id" class="form-control" name="id" required=required minlength="5" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Url</label>
+            <input type="text" #description="ngModel" [(ngModel)]="cat.url" class="form-control" name="url" required=required minlength="5" />
+        </fieldset>
+        <div class="text-center"> 
+            <button type="submit" class="btn btn-success">Save</button> &nbsp;&nbsp;&nbsp;
+            <button (click)="back()" class="btn btn-success">Back To List</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,47 @@
+.gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  columns: 3 300px;
+  font-family: serif;
+}
+
+.gallery-item {
+  /* break-inside: auto; */
+  margin-bottom: 16px;
+}
+
+.gallery-item figure {
+  margin: 0;
+  position: relative;
+}
+
+.gallery-item figcaption {
+  font-style: italic;
+  padding: 8px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 300px;
+  box-sizing: border-box;
+  bottom: 1px;
+  color: #fff;
+  height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0 0 8px 8px;
+}
+
+.btn-delete {
+  position: absolute;
+  cursor: pointer;
+  right: 10%;
+  bottom: 8px;
+  color: #fff;
+}
+
+.gallery-item img {
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+}

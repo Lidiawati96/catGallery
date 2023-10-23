@@ -1,0 +1,23 @@
+<h1>My Cat Gallery</h1>
+<br> <br>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div *ngIf=message class="alert alert-warning">{{message}}</div>
+
+<button (click)="addCat()" class="btn btn-success">Upload Cat By URL</button>
+&nbsp;&nbsp;
+<button (click)="addCatFile()" class="btn btn-success">Upload Cat By File</button>
+&nbsp;&nbsp;
+<p style="text-align: right;font-size: 20px;font-family:cursive">Total Image : {{total}}</p>
+<br> <br>
+<div class="container">
+    <div class="gallery">
+        <div class="gallery-item" *ngFor="let cat of cats; let i=index">
+            <figure>
+                <img src="data:image/jpg;base64,{{cat.gambar}}"/>
+                <figcaption class="description">{{cat.name}}</figcaption>
+                <i class="material-icons btn-delete" style="font-size:16px" (click)="deleteCat(cat.id)">delete</i>
+            </figure>
+        </div>
+    </div>
+</div>
+<br><br>
